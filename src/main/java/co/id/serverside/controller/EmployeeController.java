@@ -21,7 +21,7 @@ public class EmployeeController {
         return new ResponseEntity<>(employeeService.getAll(), HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity <Employee> getById(Long id) {
         return new ResponseEntity<>(employeeService.getById(id), HttpStatus.OK);
     }
